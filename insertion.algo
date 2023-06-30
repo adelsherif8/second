@@ -1,0 +1,23 @@
+PROCEDURE swap(VAR xp, VAR yp : INTEGER)
+VAR
+    tmp : INTEGER
+BEGIN
+    tmp := xp;
+    xp := yp;
+    yp := tmp;
+END
+ALGORITHM Insertion_sort 
+VAR
+    card: ARRAY_OF INTEGER[20];
+    first : INTEGER
+    i,j,n: INTEGER
+BEGIN
+    n:= card.length
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        FOR j FROM 0 TO n-i-1 STEP 1  DO
+            IF (tab[j] > tab[j+1]) THEN
+                swap(tab[j], tab[j+1])
+            END_IF
+        END_FOR
+    END_FOR
+END
